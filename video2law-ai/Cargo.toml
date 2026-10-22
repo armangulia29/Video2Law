@@ -1,0 +1,15 @@
+[workspace]
+members = ["engine", "app", "ai"]
+resolver = "2"
+
+# Debug builds (cargo run / cargo test) still optimise the maths: unoptimised faer and
+# the engine run ~30x slower, which would freeze the app for seconds per analysis.
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.dev.package.engine]
+opt-level = 3
+
+# The app's own code (incl. the AI tracker's per-frame image matching) also optimised.
+[profile.dev.package.app]
+opt-level = 3

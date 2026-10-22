@@ -1,0 +1,19 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+csv = "1.4.0"
+eframe = "0.37.0"
+egui_plot = "0.38.0"
+engine = { version = "0.1.0", path = "../engine" }
+image = "0.25.10"
+nokhwa = { version = "0.10.11", features = ["input-native"] }
+resvg = "0.48.1"
+rfd = "0.17.2"
+serde_json = "1.0.154"
+typst = "0.15.1"
+typst-assets = { version = "0.15.1", features = ["fonts"] }
+typst-svg = "0.15.1"
+
